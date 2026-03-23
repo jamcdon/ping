@@ -11,7 +11,7 @@ func SetupRouter() *gin.Engine {
 
 	v1 := router.Group("/v1")
 	{
-		v1.GET("/daily/:symbol", Controllers.Daily)
+		v1.GET("/daily/:symbol/:days", Controllers.Daily)
 	}
 
 	return router
